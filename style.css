@@ -1,0 +1,126 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: #f1f1f1;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 120%;
+  }
+  
+  .container {
+    background: #000000d0;
+    color: #fff;
+    padding: 2em;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 420px;
+    margin: 1em;
+  }
+  
+  .search {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1em;
+  }
+  
+  button {
+    margin: 0.5em;
+    border-radius: 50%;
+    border: none;
+    height: 46px;
+    width: 46px;
+    outline: none;
+    background: #7c7c7c2b;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+  }
+  
+  input.city-search {
+    border: none;
+    border-radius: 24px;
+    padding: 0.4em 1em;
+    background: #7c7c7c2b;
+    color: #fff;
+    font-family: inherit;
+    font-size: 105%;
+    outline: none;
+    width: calc(100% - 100px);
+  }
+  
+  button:hover {
+    background: #7c7c7c;
+  }
+  
+  h1.temp {
+    margin: 0;
+    margin-bottom: 0.4em;
+  }
+  
+  .flex {
+    display: flex;
+    align-items: center;
+  }
+  
+  .description {
+    text-transform: capitalize;
+    margin-left: 8px;
+  }
+  
+  .weather.loading {
+    visibility: hidden;
+    max-height: 20px;
+    position: relative;
+  }
+  
+  .weather.loading:after {
+    content: "Loading...";
+    visibility: visible;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    color: #fff;
+  }
+  
+  .autocomplete {
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    width: 100%;
+    background: #7c7c7c2b;
+    border-radius: 4px;
+    z-index: 1;
+    backdrop-filter: blur(4px); /* Add blur effect to the background */
+    padding: 0.5em;
+    max-height: 200px;
+    overflow-y: auto;
+  }
+  
+  .option {
+    cursor: pointer;
+    padding: 0.5em;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .option:hover {
+    background-color: #7c7c7c;
+  }
+  
+  .wind {
+    transition: filter 0.2s ease-in-out; /* Add transition for smooth effect */
+  }
+  
+  .wind.blurred {
+    filter: blur(4px); /* Apply blur effect to the wind speed */
+  }
+  
+  .weather.loading .wind {
+    filter: none; /* Remove blur effect when loading */
+  }
+  
+  
